@@ -4,7 +4,7 @@ import { DataTable } from "./data-table"
 async function getData(): Promise<Member[]> {
   // Fetch data from your API here.
 
-  const response = await fetch('http://localhost:6543/api/members/', { cache: 'no-store' });
+  const response = await fetch('http://apiserver:8080/api/members/', { cache: 'no-store' });
   const data = await response.json();
 
   return data.map((item: any) => ({
